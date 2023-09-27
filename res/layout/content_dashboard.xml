@@ -1,0 +1,204 @@
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/white"
+        android:padding="10dp"
+        >
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/dash_gave_sum"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="1"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="₹0"
+                android:textColor="#F44336"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/dash_got_sum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="₹0"
+                android:textColor="#4CAF50"
+                android:textSize="20dp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="You Gave"
+                android:textSize="15dp"/>
+
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="You Got"
+                android:textSize="15dp"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+            <TextView
+                android:id="@+id/db_account"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_span="2"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="COMPANY"
+                android:textColor="#3F51B5"
+                android:textSize="18dp" />
+        </TableRow>
+
+    </TableLayout>
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@color/white"
+        android:columnCount="2"
+        android:padding="1dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:rowCount="1">
+
+         <EditText
+            android:id="@+id/dashb_custsize_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_columnWeight="1.5"
+            android:hint="0 CUSTOMERS"
+             android:singleLine="true"
+             android:textSize="12dp"
+             android:layout_marginLeft="5dp"
+            android:layout_gravity="center_vertical"
+             android:background="@drawable/edittext_borderlayout"
+             android:drawableLeft="@drawable/ic_baseline_search_24"
+             />
+
+        <Button
+            android:id="@+id/db_pdfexp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="PDF"
+            android:backgroundTint="@color/blue"
+            android:layout_marginRight="5dp"
+            android:textColor="@color/white"
+            android:layout_columnWeight="0.5" />
+
+    </GridLayout>
+    <RelativeLayout
+        android:layout_weight="1"
+        android:minHeight="300dp"
+        android:adjustViewBounds="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ListView
+            android:background="@color/white"
+            android:id="@+id/dashboard_clistvew"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="1dp"
+
+            />
+    </RelativeLayout>
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="0dp"
+        android:background="#FBFBCF"
+        android:columnCount="3"
+        android:padding="5dp"
+        android:rowCount="1">
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_columnWeight="1"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            app:srcCompat="@drawable/ic_baseline_arrow_forward_24" />
+
+        <Button
+            android:id="@+id/dashboard_addcustomer_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:background="@drawable/roundedbutton"
+            android:drawableLeft="@drawable/ic_baseline_person_add_24"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text=" ADD CUSTOMER"
+            android:textColor="#FBFAFA"
+            android:textSize="15dp" />
+    </GridLayout>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:columnCount="2"
+        android:rowCount="1">
+
+        <TextView
+            android:id="@+id/db_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:drawableTop="@drawable/ic_baseline_home_24"
+            android:gravity="center"
+            android:text="Home"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/db_companytxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:drawableTop="@drawable/ic_baseline_apps_24"
+            android:drawableTint="#0000FF"
+            android:gravity="center"
+            android:text=""
+            android:textSize="20dp" />
+
+    </GridLayout>
+
+</LinearLayout>

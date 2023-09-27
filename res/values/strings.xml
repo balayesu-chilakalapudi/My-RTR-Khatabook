@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">RTR</string>
+    <string name="status_code_sent">Status Code Sent</string>
+    <string name="status_verification_failed">status_verification_failed</string>
+    <string name="status_verification_succeeded">status_verification_succeeded</string>
+    <string name="instant_validation">instant_validation</string>
+    <string name="status_sign_in_failed">status_sign_in_failed</string>
+    <string name="signed_out">signed_out</string>
+    <string name="signed_in">signed_in</string>
+    <string name="firebase_status_fmt">firebase_status_fmt</string>
+</resources>

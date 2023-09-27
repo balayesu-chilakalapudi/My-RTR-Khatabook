@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#74DEDFDF"
+    android:orientation="vertical"
+    tools:context=".EditTransactionActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:id="@+id/et_tbar"
+        app:title="Transaction"
+        app:titleTextColor="@color/white"
+        android:background="@color/tbarbackground"
+        app:navigationIcon="@drawable/ic_baseline_keyboard_backspace_24"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="vertical">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_amount"
+                android:background="@color/white"
+                android:hint=" ₹ Enter amount"
+                android:inputType="number"
+                android:textSize="18dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_details"
+                android:background="@color/white"
+                android:hint=" Enter Details (Item Name, Bill No, Quantity ...)"
+                android:textSize="18dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:id="@+id/et_sender_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@color/white"
+            android:orientation="vertical">
+        <TextView
+            android:id="@+id/et_sendertxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="SENDER"
+            android:textSize="13dp"
+            android:layout_gravity="center_vertical"
+            />
+
+            <!--
+            <Spinner
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:id="@+id/etsend_spinner"
+                android:layout_gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                />
+            -->
+            <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                android:id="@+id/etsend_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/et_rec_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@color/white"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/et_receivertxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="RECEIVER"
+                android:textSize="13dp"
+                android:layout_gravity="center_vertical"
+                />
+
+            <!--
+            <Spinner
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:id="@+id/etrec_spinner"
+                android:layout_gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                />
+                -->
+
+            <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                android:id="@+id/etrec_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            >
+
+            <Button
+                android:id="@+id/et_dateview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="setDate"
+                android:layout_gravity="left"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:backgroundTint="#4CAF50"
+                android:text="20 Aug 20" />
+
+
+            <Button
+                android:id="@+id/et_attach_button"
+                android:layout_weight="1"
+                android:layout_gravity="right"
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#9C27B0"
+                android:text="Attach bills" />
+        </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="wrap_content">
+      <ListView
+          android:id="@+id/et_attlvw"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          />
+    </RelativeLayout>
+
+        <Button
+            android:id="@+id/et_save_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SAVE" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

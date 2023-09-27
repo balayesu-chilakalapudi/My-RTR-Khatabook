@@ -1,0 +1,22 @@
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/action_request_money"
+        android:orderInCategory="100"
+        android:title="English"
+        app:showAsAction="always"
+        android:icon="@drawable/request_money_logo"
+        />
+
+    <item
+        android:id="@+id/action_collection"
+        android:orderInCategory="100"
+        android:title="English"
+        app:showAsAction="always"
+        android:icon="@drawable/collection_logo"
+        />
+
+
+
+</menu>

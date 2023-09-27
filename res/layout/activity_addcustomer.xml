@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AddcustomerActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/addcustbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/tbarbackground"
+            app:navigationIcon="@drawable/ic_baseline_keyboard_backspace_24"
+            app:subtitle="choose customer"
+            app:subtitleTextColor="@color/white"
+            app:title="Add Customer"
+            app:titleTextColor="@color/white">
+
+        </androidx.appcompat.widget.Toolbar>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            app:hintEnabled="false">
+
+            <com.google.android.material.textfield.TextInputEditText
+               android:id="@+id/addc_typename"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:cursorVisible="true"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:background="@color/white"
+                android:drawableLeft="@android:drawable/ic_menu_search"
+                android:hint="Type Customer Name"
+                 />
+        </com.google.android.material.textfield.TextInputLayout>
+</RelativeLayout>
+
+<LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:weightSum="1"
+    android:layout_height="wrap_content" >
+
+<Button
+    android:layout_weight="0.5"
+    android:id="@+id/addcust_addcust_button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Add New Customer"
+    android:textSize="14dp"
+    android:textColor="@color/white"
+    android:layout_margin="5dp"
+    android:backgroundTint="@color/colorPrimaryDark"
+    />
+    <Button
+        android:layout_weight="0.5"
+        android:id="@+id/addcontact_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14dp"
+        android:text="Add from Contacts"
+        android:textColor="@color/white"
+        android:layout_margin="5dp"
+        android:backgroundTint="@color/green"
+        />
+
+
+
+</LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:background="#FFFFFF"
+            android:maxHeight="100dp"
+            android:minHeight="100dp"
+            android:orientation="vertical">
+
+            <ListView
+                android:id="@+id/addcustomer_contacts_listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ECEAEA"
+    tools:context=".CustomerTransactionEntryActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/ctebar"
+        android:layout_width="match_parent"
+        app:titleTextColor="@color/white"
+        app:subtitleTextColor="@color/white"
+        android:layout_height="wrap_content"
+        android:background="@color/tbarbackground"
+        app:navigationIcon="@drawable/ic_baseline_keyboard_backspace_24" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/tbarbackground">
+    <TableLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+    >
+    <TableRow
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        >
+        <TextView
+            android:id="@+id/cte_balamt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:text="Amount You Got\n₹0.0"
+            android:background="@color/white"
+            android:gravity="center"
+            android:padding="10dp"
+            />
+        <TextView
+            android:id="@+id/cte_bal_gave"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="YOU GAVE\n₹0.0"
+            android:gravity="center"
+            android:layout_weight="0.3"
+            android:background="@color/white"
+            android:padding="10dp"
+            android:textColor="@color/red"
+            />
+        <TextView
+            android:id="@+id/cte_bal_got"
+            android:text="YOU GOT\n₹0.0"
+            android:layout_weight="0.3"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="10dp"
+            android:textColor="@color/green"
+            />
+    </TableRow>
+</TableLayout>
+</LinearLayout>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        >
+    <TableRow
+        android:layout_weight="1"
+        >
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:text="ENTRIES"
+        />
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="YOU GAVE"
+        android:gravity="center"
+        android:layout_weight="0.25"
+        />
+    <TextView
+        android:text="YOU GOT"
+        android:layout_weight="0.25"
+        android:gravity="center"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        />
+    </TableRow>
+</TableLayout>
+
+    <RelativeLayout
+    android:layout_width="match_parent"
+        android:adjustViewBounds="true"
+        android:layout_weight="1"
+    android:layout_height="wrap_content"
+        android:background="#F6F5F5"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+<ListView
+    android:id="@+id/cte_lvw"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    />
+</RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:id="@+id/cte_yougave_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/red"
+            android:text="You Gave ₹" />
+
+        <Button
+android:id="@+id/cte_yougot_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/green"
+            android:text="You Got ₹" />
+    </LinearLayout>
+</LinearLayout>
